@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Lazy-Load WebComponent Test </title>
+    <script type="module" src="lazy-load.js"></script>
+    <style>
+      * {
+         box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0; 
+      }
+      
+      #splash {
+        display: block;
+        background: green;
+        height: 120vh;
+      }
+      
+      #splash h1 {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+      }
+      
+      #splash p {
+        max-width: 20rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="splash">
+      <h1> Lazy-Load Test Page </h1>
+      <p> Scroll down to automatically load more html fragments. As their
+        trigger link scrolls into the viewport an XMLHttpRequest is made
+        for the specifcied page.
+      </p>
+    </section>
+    <lazy-load id="test-page-1" href="page1.html"></lazy-load>
+    <lazy-load id="test-page-2" href="page2.html"></lazy-load>
+    <lazy-load id="test-page-3" href="page3.html"></lazy-load>
+  </body>
+</html>
